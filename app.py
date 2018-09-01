@@ -58,7 +58,7 @@ def error404(error):
 
 
 if __name__ == '__main__':
-	if os.environment.get('APP_LOCATION') == 'heroku':	
+	if os.environ.get('APP_LOCATION') == 'heroku':	
 		run(host='0.0.0.0', port=int(os.environment.get('PORT', 5000)))
 	else:
 		run(host='localhost', port=8080, debug=False, reloader=True)
